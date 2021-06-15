@@ -54,7 +54,9 @@ public class ex41_base {
 
         //Use nameFormatter to format the names.
         nameFormatter tableMaker = new nameFormatter();
-        String result = tableMaker.makeTable(names);
+        tableMaker.setNames(names);
+        tableMaker.sortNames();
+        String result = tableMaker.makeTable();
 
         //Print the result.
         System.out.print(result);

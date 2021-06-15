@@ -13,9 +13,7 @@ class fileReader{
 }
 
 class nameFormatter{
-    - ArrayList<String> list
-    + setNames void(ArrayList<String>)
-    + sortList ArrayList<String>()
+    + splitString String[](String nameLine)
     + makeTable String(ArrayList<String> list)
 }
 

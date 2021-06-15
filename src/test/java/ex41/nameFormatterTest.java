@@ -12,9 +12,8 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class nameFormatterTest {
-
     @Test
-    void makeTable() {
+    void sortNames(){
         //Use the fileReader to get a list of names.
         fileReader input = new fileReader();
         input.makeFileReader();
@@ -23,7 +22,27 @@ class nameFormatterTest {
 
         //Use nameFormatter to format the names.
         nameFormatter tableMaker = new nameFormatter();
-        String result = tableMaker.makeTable(names);
+        tableMaker.setNames(names);
+        ArrayList<String> check = tableMaker.sortNames();
+        String result = check.get(0);
+
+        assertEquals("Johnson, Jim",result);
+
+    }
+
+    @Test
+    void makeTable(){
+        //Use the fileReader to get a list of names.
+        fileReader input = new fileReader();
+        input.makeFileReader();
+        input.readFile();
+        ArrayList<String> names = input.getList();
+
+        //Use nameFormatter to format the names.
+        nameFormatter tableMaker = new nameFormatter();
+        tableMaker.setNames(names);
+        tableMaker.sortNames();
+        String result = tableMaker.makeTable();
 
         //I don't know why this doesn't work.
         //assertTrue(result.equals("Total of 7 names\n-----------------\nJohnson, Jim\nJones, Aaron\nJones, Chris\nLing, Mai\nSwift, Geoffrey\nXiong, Fong\nZarnecki, Sabrina\n"));
