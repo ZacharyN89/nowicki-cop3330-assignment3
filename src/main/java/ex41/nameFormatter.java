@@ -9,13 +9,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class nameFormatter {
+    //We will internally hold all of the information.
     private static ArrayList<String> list = new ArrayList<String>();
 
     public void setNames(ArrayList<String> input){
+        //Set our info to be what the user has input.
         list = input;
     }
 
     public ArrayList<String> sortNames(){
+        //Sort the names alphabetically.
          Collections.sort(list);
          return list;
     }

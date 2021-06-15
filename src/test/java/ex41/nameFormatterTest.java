@@ -20,12 +20,13 @@ class nameFormatterTest {
         input.readFile();
         ArrayList<String> names = input.getList();
 
-        //Use nameFormatter to format the names.
+        //Use nameFormatter to sort the names.
         nameFormatter tableMaker = new nameFormatter();
         tableMaker.setNames(names);
         ArrayList<String> check = tableMaker.sortNames();
         String result = check.get(0);
 
+        //If after the sort the first name is now the correct one then the sort was successful.
         assertEquals("Johnson, Jim",result);
 
     }

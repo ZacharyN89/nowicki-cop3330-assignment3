@@ -7,8 +7,6 @@ package ex41;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.*;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class fileReaderTest {
@@ -17,6 +15,8 @@ class fileReaderTest {
     void readLine() {
         fileReader test = new fileReader();
         test.makeFileReader();
+
+        //If the first line read is the first line in the file then it worked successfully.
         assertEquals("Ling, Mai",test.readFileLine());
     }
 
