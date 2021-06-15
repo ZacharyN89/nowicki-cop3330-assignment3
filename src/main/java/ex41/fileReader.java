@@ -20,7 +20,7 @@ public class fileReader {
         //Make the file reader.
         try{
             br = new BufferedReader(
-                    new FileReader("text.txt"));
+                    new FileReader("exercise41_input.txt"));
         }catch(Exception ex){
             System.out.print("Can't find file.");
         }
