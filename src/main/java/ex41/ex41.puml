@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App{
+}
+
+class fileReader{
+    - BufferedReader br
+    + getList ArrayList<String>()
+    + readFile void()
+    + readFileLine String()
+    + makeFileReader BufferedReader()
+}
+
+class nameFormatter{
+    + makeTable String(ArrayList<String> list)
+}
+
+App o-> fileReader
+App o--> nameFormatter
+
+
+
+
+@enduml
