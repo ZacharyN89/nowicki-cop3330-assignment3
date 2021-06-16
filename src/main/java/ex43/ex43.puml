@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App{
+}
+
+class makeWebsite{
+    + askJS boolean()
+    + askCSS boolean()
+    + makeFiles void()
+}
+
+App o-> makeWebsite
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App{
+}
+
+class findAndReplace{
+    - Path fileName
+    + getFile void()
+    + replace String()
+}
+
+class outputToFile{
+    - Scanner in
+    + askFilePath String()
+    + writeOut void(String fileText)
+}
+
+
+App o-> findAndReplace
+@enduml
