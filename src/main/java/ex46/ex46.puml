@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App{
+}
+
+class countWords{
+    - Path filePath
+    + parseFile String ()
+    + removeLineBreaks String(String input)
+    + makeList ArrayList<String> (String input))
+    + removeBlanks ArrayList<String>(ArrayList<String> input)
+    + countWords ArrayList<Map <String, int>> (ArrayList<String> text)
+    + makeChart String (ArrayList<Map <String, int>>)
+}
+
+App o-> countWords
+@enduml
