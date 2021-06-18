@@ -2,12 +2,16 @@
 'https://plantuml.com/sequence-diagram
 
 class App{
+    + askForName String()
+    + askForAuthor String()
+    + askJS boolean()
+    + askCSS boolean()
 }
 
 class makeWebsite{
-    + askJS boolean()
-    + askCSS boolean()
-    + makeFiles void()
+    + setFiles void()
+    + makeDirectories void()
+    + makeHTML String()
 }
 
 App o-> makeWebsite
