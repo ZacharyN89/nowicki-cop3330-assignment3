@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App{
+    - listFinder test
+    - Scanner in
+    + askProduct String()
+    + getName ArrayList<String>()
+    + printProduct void(ArrayList<String>)
+}
+
+class listFinder{
+    - JSONObject JSON
+    + parseJSON String()
+    + findProductIndex()
+}
+
+
+App o-> listFinder
+@enduml
